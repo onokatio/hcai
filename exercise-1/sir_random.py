@@ -12,7 +12,7 @@ r=0.1 #recovery rate
 
 
 
-frac_vaccine=0.1
+frac_vaccine=0.01
 #frac_vaccine=0
 num_vaccinated=len(g.nodes)*frac_vaccine
 

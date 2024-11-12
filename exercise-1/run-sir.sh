@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for method in random;do
-	for net in ba.txt ba-sparse.txt;do
+for method in random degree ;do
+	for net in ba.txt ba-sparse.txt ;do
 		mkdir -p $method
 		for i in `seq 1 100`
 		do
