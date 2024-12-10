@@ -14,16 +14,16 @@ r=0.1 #recovery rate
 frac_vaccine=0.01
 #frac_vaccine=0
 num_vaccinated=int(len(g.nodes)*frac_vaccine)
-degree_sorted_list=sorted(g.degree, key=lambda x: x[1], reverse=True)
+betweenness_sorted_list=sorted(betweenness_centrality(g).items(), key=lambda x: x[1], reverse=True)
+#print(betweenness_sorted_list[0:10])
 for i in range(num_vaccinated):
-        a=degree_sorted_list[i][0]
+        a=betweenness_sorted_list[i][0]
         g.remove_node(a)
 
 inf={} #dictionary for infected node
 # A randomly selected node becomes infected
 i = random.choice(list(g.nodes()))
 inf[i]=1
-
 
 
 
@@ -46,3 +46,8 @@ for time in range(1,max_count):
     print(time,len(g.nodes()),len(inf),num_r,num_inf)
     if len(inf)==0:
         break
+
+
+
+
+            

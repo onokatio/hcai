@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for method in random degree ;do
+for method in random degree betweenness d50b50 ;do
 	for net in ba.txt ba-sparse.txt ;do
 		mkdir -p $method
 		for i in `seq 1 100`
